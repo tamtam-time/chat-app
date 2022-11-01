@@ -8,11 +8,12 @@
       <%= l message.created_at %>
     </div>
   </div>
-  
+
   <div class="lower-message">
     <div class="message-content">
       <%= message.content %>
     </div>
   </div>
+  <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
 
 </div>
